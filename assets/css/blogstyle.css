@@ -838,6 +838,8 @@ footer p{
 .post-nav{
     display: flex;
     align-items: center;
+    margin-left: 150px;
+    margin-right: 250px;
 }
 .searchbar{
     width: 100%;
