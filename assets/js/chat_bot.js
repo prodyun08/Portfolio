@@ -88,7 +88,7 @@ function waitAndResponce(inputText) {
             }, 2000);
             setTimeout(() => {
                 sendTextMessage("Enter a command:");
-            },3000);            
+            },3000);                                                                                                          
             break;
             
         
