@@ -142,13 +142,15 @@ header.shadow .logo{
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 400px; /* Adjust as needed */
+    max-width: 100%; /* Full width of the container */
     margin: 20px auto;
-  }
-  
-  /* Search input styling */
-  .search-input {
-    width: 100%;
+    padding: 0 15px; /* Adjust for better spacing */
+    box-sizing: border-box; /* Include padding/border in width calculation */
+}
+
+/* Search input styling */
+.search-input {
+    width: 100%; /* Full width within the container */
     padding: 12px 20px;
     border: 2px solid #dcdcdc;
     border-radius: 30px;
@@ -157,30 +159,53 @@ header.shadow .logo{
     transition: 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: #f8f8f8;
-  }
-  
-  .search-input:focus {
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.search-input:focus {
     border-color: #6200ea; /* Focus border color */
     box-shadow: 0 4px 8px rgba(98, 0, 234, 0.3);
     background-color: #ffffff; /* Background when focused */
-  }
-  
-  /* Search button styling */
-  .search-btn {
-    padding: 10px 16px;
-    margin-left: -50px;
-    background-color:var(--second-color);
+}
+
+/* Search button styling */
+.search-btn {
+    width: 40px; /* Fixed width for button */
+    height: 40px; /* Fixed height */
+    margin-left: -45px; /* Ensure the button overlaps the input field */
+    background-color: var(--second-color);
     border: none;
     border-radius: 50%;
     color: white;
     font-size: 16px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: background-color 0.3s ease;
-  }
-  
-  .search-btn:hover {
+}
+
+.search-btn:hover {
     background-color: #12a6f5; /* Darker shade on hover */
-  }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .search-box {
+        padding: 0 10px; /* Less padding for mobile */
+    }
+
+    .search-btn {
+        width: 35px; /* Slightly smaller button for mobile */
+        height: 35px;
+        margin-left: -40px; /* Adjust to fit the mobile layout */
+    }
+    #sidebar{
+        width: 80%;
+    }
+}
+
+
 
   #catagories{
     margin-left: 20px;
@@ -406,6 +431,7 @@ footer p{
     .post-header{
         margin-top: 9rem !important;
     }
+
 }
 
 @media (max-width: 570px){
@@ -453,8 +479,9 @@ footer p{
 
     .header-img{
         height: 340px;
-    }
+    }    
 }
+
 
 /* Footer Media Query */
 @media (max-width: 991px){
