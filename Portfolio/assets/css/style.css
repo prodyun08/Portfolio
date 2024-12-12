@@ -1,0 +1,547 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+body { 
+  background-color:rgb(190, 194, 201);
+  color: #000000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#wrapper-canvas canvas {
+  max-width: 100%;
+}
+/* .hidden {
+  display: none;
+} */
+.dark-mode {
+  background-color: rgb(10, 25, 47);
+  color: #fffafad2;
+}
+.dark-mode .work{
+  background-color: rgb(190, 204, 150);
+} 
+svg {
+  cursor: pointer;
+  transition: stroke 0.3s ease;
+}
+.dark-mode #flexon-1 {
+  fill: #000000; /* Default color (black) */
+  transition: fill 0.3s ease; /* Smooth transition for color change */
+}
+#flexon-1 {
+  fill: #64ffda; /* Dark mode color */
+}
+.dark-mode #flexon{
+  stroke: #64ffda;
+}
+.dark-mode #flexon1{
+  color: #64ffda;
+}
+.dark-mode #sun-icon{   
+  color: #64ffda;
+}
+.dark-mode #moon-icon{
+  color: #64ffda;
+}
+.dark-mode #header-icon {
+  color: #64ffda;
+}
+ .hide {
+    display: none;
+}
+.me-about {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 1000px;
+    background: #532b2b;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    padding: 20px 30px;
+    text-align: center;
+    transition: top 0ms ease-in-out 200ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+    
+    
+}
+.popup.active {
+    margin-top:40px;
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0ms,
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
+                z-index: 10;
+                
+}
+.popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+#form h2, h3 {
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+.box {
+    display: flex;
+}
+.form-element {
+    width: 500px;
+    text-align: left;
+} 
+.pho {
+    margin-top: -100px;
+    margin-left: 50px;
+}
+.pho .im1 {
+    padding-top: 50px;
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.skill {
+  display: flex !important;
+}
+.skill img {
+  width: 50px;
+  margin: 5px;
+  cursor: default; 
+}
+.popup.active .skills img {
+  cursor: pointer;
+}
+#copywrite{
+  text-align: center;
+  font-size: 30px;  
+  font-weight: 500;
+}
+#rsm{
+  display: block;
+}
+/* ////window blur */
+.blur {
+  filter: blur(15px);
+  pointer-events: none; 
+  opacity: 0.5;
+  cursor: default; 
+  transition: 0.16s ease-in;
+}
+.blur svg {
+  pointer-events: none; 
+}
+.blur .flex a {
+  pointer-events: none; 
+}
+/* Display block -------------------------------------------------------------------------------
+----------------------------------------------------------*/
+.popup {
+  display: none; /* Hidden thake by default */
+  position: fixed;
+   z-index: 1000000000000000000000000; 
+}
+.popup .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 24px;
+}
+.popup.active {
+  display: flex; 
+}
+.vertical-text {
+  /* cursor: context-menu; */
+  cursor: pointer;
+  position:fixed;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-align: center;
+  left: 10px;
+  top:30px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Source Code Pro", monospace;
+  color: #64ffda;
+  writing-mode: vertical-rl; /* Vertical text orientation */
+  transform: rotate(180deg); /* Rotates the text for better readability */
+  letter-spacing: 10px; /* Adds space between each letter */
+  gap: 20px;
+}
+#arrow-mail {
+   font-size: 24px;/* Adjust this to change the overall size */
+  transform: scaleY(2); /* This will stretch the arrow vertically */
+  /* transform: scaleY(2); */
+}
+#chatbot{
+  position:fixed;
+  bottom: 10px;
+  right: 10px;
+  transform: translate(-50%, -50%);
+  size: 10px;
+  z-index:1000;
+}
+
+.head-social{
+  position: absolute;
+  align-items: center;
+  right: 10px;
+  transform: translate(-50%, -50%);
+  size: 10px;
+  z-index:1000;
+}
+
+/* .flex{
+  display: flex;
+} */
+.wrapper{
+	display:inline-flex;
+	}
+.wrapper .icon-chat{
+	cursor:pointer;
+	display:flex;
+  align-items: center;
+  justify-content: center;
+	flex-direction:column;
+	position:relative;
+	transition:0.4s cubic-bezier(0.68, -0.55,0.265,1.55);
+}
+.wrapper .icon-chat .tooltip{
+position:absolute;
+top:0;
+background:#fff;
+color:#772828;
+padding:10px 18px;
+font-size:20px;
+font-weight:500;
+border-radius:25px;
+opacity:0;
+pointer-events:none;
+box-shadow:0px 10px 10px rgba(95, 73, 73, 0.164);
+transition:0.4s cubic-bezier(0.68, -0.55,0.265,1.55);
+}
+.wrapper .icon-chat:hover .tooltip{
+top:-70px;
+opacity:1;
+pointer-events:auto;
+}
+.icon-chat .tooltip:before{
+position:absolute;
+content:"";
+height:15px;
+width:15px;
+background:inherit;
+left:50%;
+bottom:-6px;
+transform:translateX(-50%) rotate(45deg);
+}
+.ht-work{
+  color:#772828;
+}
+.typewrite{
+  font-size: larger;
+}
+
+#client{
+  width: 150px;
+  height: 150px;
+}
+
+#dst-l,#dst-r{
+  color: rgb(255, 127, 127);
+}
+#dst-l{
+  text-align: right;
+}
+
+@media  screen and (max-width: 650px) {
+  .vertical-text{
+    display: none;
+  }
+  #cvs3{
+    display: none;
+  }
+  .me-about{
+    height: 100vh;
+  }
+  #popup{
+    width: 90%;
+        padding: 15px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+  #form h2{
+    text-align: center;
+    font-size: 20px;
+  }
+  .box, .form-element{
+    width: 100%;
+    font-size: small;
+  }
+  .pho{
+    display: none;
+  }
+  .bt-resume{
+    align-items: center;
+    margin-left: -50px;
+    margin-top: 20px;
+  }
+  .head-social{
+  z-index: 1;
+    }  
+}
+#cards-container {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin: 40px 10px;
+  width: 100%;
+}
+
+/* // project card here use ---  */
+.project-card{
+    display: flex; /* Change to flex to control alignment within each card */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: auto; /* Adjust height for better responsiveness */
+}
+
+
+/* Card Container */
+.card {
+  background-color: rgb(23,42,69);
+  color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  width: 280px;
+  height: 230px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.folder-icon {
+  font-size: 26px;
+  color: #5EC6E8;
+}
+
+/* Icon Group for GitHub and External Link */
+.icon-group {
+  display: flex;
+  gap: 15px;
+}
+
+.icon-group i {
+  font-size: 24px;
+  color: #5EC6E8;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.icon-group i:hover {
+  color: #00A6E8;
+}
+
+/* Card Body */
+
+.card-body h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.card-body p {
+  font-size: 14px;
+  color: #B0BEC5;
+  line-height: 1.5;
+padding-bottom:10px;
+}
+
+/* Card Footer */
+.card-footer {
+  display: flex;
+  gap: 12px;
+}
+
+.tech {
+  background-color: #354A65;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.tech:hover {
+  background-color: #4a678c;
+}
+
+/* Add subtle animated gradient background */
+.card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(60deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
+  animation: rotateBackground 6s infinite linear;
+  z-index: 0;
+}
+
+@keyframes rotateBackground {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.card::before {
+  border-radius: 50%;
+}
+
+/* Ensure card content stays on top of the gradient */
+.card * {
+  position: relative;
+  z-index: 1;
+}
+
+/* End this projects card ? */     
+
+
+/* For screens smaller than 768px (mobile devices) */
+@media (max-width: 768px) {
+  /* Adjust padding and margins */
+  .timeline {
+    padding: 10px;
+    flex-direction: column !important;
+  }
+  /* Make the two sections stack vertically */
+  .timeline article {
+    width: 100%;  /* Make each section take full width */
+    text-align: center;  /* Center the text for better readability on small screens */
+  }
+
+
+
+  /* Center the headings */
+  #education{
+    text-align: right;
+  }
+  #hobby{
+    text-align: left;
+  }
+  .timeline article h2 {
+    font-size: 25px; /* Adjust font size for mobile */
+    padding-bottom: 40px; /* Adjust the bottom padding for spacing */
+  }
+
+  .timeline figcaption {
+    font-size: 13px!important; /* Make the captions smaller */
+  }
+  .timeline p{
+    font-size: 7px!important;
+  }
+  
+}
+
+/* For screens smaller than 768px (mobile devices) */
+@media (max-width: 768px) {
+  /* Ensure each card takes up full width and stacks vertically */
+  #cards-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+    word-wrap: break-word; /* Ensures long words break and wrap within the container */
+    overflow-wrap: break-word; /* Additional for handling long words */
+    width: 100%; /* Ensure the container adapts to screen width */
+  }
+
+  .card-item {
+    width: 100%;  /* Each card takes full width */
+    margin-bottom: 20px;  /* Space between the cards */
+    text-align: center;  /* Center the content */
+  }
+
+  .card-item h2 {
+    font-size: 20px;  /* Adjust heading font size for mobile */
+  }
+
+  .card-item p {
+    font-size: 16px;  /* Adjust paragraph font size */
+    padding: 10px 20px;  /* Add padding for better readability */
+  }
+
+  .card-item img, .card-item .icon {
+    width: 100%;  /* Make images or icons responsive */
+    height: auto;  /* Maintain aspect ratio */
+  }
+  
+}
+
+/* Style for the typewriter text, keeping the color consistent */
+.typewrite .wrap {
+  color: inherit;  /* Inherit color from the body (either black or white) */
+  transition: color 0.3s ease;  /* Smooth color transition */
+}
+
+/* Optional: If you want to keep the text in a specific color that does not change */
+.typewrite .wrap[data-type] {
+  color: #000000;  /* Set specific color (black) for data-type text */
+}
+
+.dark-mode .typewrite .wrap[data-type] {
+  color: #000000;  /* Keep it black in dark mode */
+}
+
+.typing-test {
+  transition: color 0.3s ease;  /* Smooth transition for main text */
+}
+
+.pointer-events-none {
+  pointer-events: none;  /* Disable pointer events */
+}

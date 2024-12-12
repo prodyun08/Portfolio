@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  
+canvas {
+    display: block;
+    margin: 0px auto 20px;
+    cursor: move;
+    
+  }
+  
+  a { color: #5AE; }
+  a:hover { color: #247; }
+   */

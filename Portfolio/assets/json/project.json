@@ -1,0 +1,65 @@
+[
+    {
+        "github_repo": "https://github.com/your-github-repo-1",
+        "external_link": "https://your-external-link.com/1",
+        "project_name": "Project 1",
+        "description": "Project 1 under HTML-CSS-Js coding.",
+        "technologies": ["HTML", "CSS", "Python"]
+    },
+    {       
+        "github_repo": "https://github.com/your-github-repo-2",
+        "external_link": "https://your-external-link.com/2",
+        "project_name": "Project 2",
+        "description": "Project 2 under HTML-CSS-Js coding.",
+        "technologies": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+        "github_repo": "https://github.com/your-github-repo-3",
+        "external_link": "https://your-external-link.com/3",
+        "project_name": "Project 3",
+        "description": "Project 3 under HTML-CSS-Js coding.",
+        "technologies": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+        "github_repo": "https://github.com/your-github-repo-4",
+        "external_link": "https://your-external-link.com/4",
+        "project_name": "Project 4",
+        "description": "Project 4 under HTML-CSS-Js coding.",
+        "technologies": ["HTML", "CSS", "Python"]
+    },
+    {
+        "github_repo": "https://github.com/your-github-repo-5",
+        "external_link": "https://your-external-link.com/5",
+        "project_name": "Project 5",
+        "description": "Project 5 under HTML-CSS-Js coding.",
+        "technologies": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+        "github_repo": "https://github.com/your-github-repo-6",
+        "external_link": "https://your-external-link.com/6",
+        "project_name": "Project 6",
+        "description": "Project 6 under HTML-CSS-Js coding.",
+        "technologies": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+        "github_repo": "https://github.com/your-github-repo-7",
+        "external_link": "https://your-external-link.com/7",
+        "project_name": "Project 7",
+        "description": "Project 7 under HTML-CSS-Js coding.",
+        "technologies": ["HTML", "CSS", "Python"]
+    },
+    {
+        "github_repo": "https://github.com/your-github-repo-8",
+        "external_link": "https://your-external-link.com/8",
+        "project_name": "Project 8",
+        "description": "Project 8 under HTML-CSS-Js coding.",
+        "technologies": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+        "github_repo": "https://github.com/your-github-repo-9",
+        "external_link": "https://your-external-link.com/9",
+        "project_name": "Project 9",
+        "description": "Project 9 under HTML-CSS-Js coding.",
+        "technologies": ["HTML", "CSS", "JavaScript"]
+    }
+]
