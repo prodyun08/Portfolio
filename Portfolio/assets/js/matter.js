@@ -1,3 +1,21 @@
+function adjustCanvasSize() {
+  const canvas = document.querySelector('canvas'); // Replace with your canvas selector if it's specific
+  if (canvas) {
+      // Set canvas width and height to match the viewport
+      canvas.style.width = "100%";
+      canvas.style.height = "100%";
+
+      // Optional: If using a 3D library like Three.js, update renderer size
+      const renderer = canvas.renderer; // Adjust if needed
+      if (renderer) {
+          renderer.setSize(window.innerWidth, window.innerHeight);
+      }
+  }
+}
+
+// Call the function on load and resize
+window.addEventListener('load', adjustCanvasSize);
+window.addEventListener('resize', adjustCanvasSize);
 
 
 // Made with Zdog

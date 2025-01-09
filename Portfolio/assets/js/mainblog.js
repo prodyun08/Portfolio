@@ -15,7 +15,7 @@ async function searchblog(){
             post.innerHTML += `<div class="post-box tech">
             <img src="${post1.image}" alt="" class="post-img">
             <h2 class="category">${post1.type}</h2>
-            <a href="post.html?id=${post1.id}" class="post-title">${post1.name}</a>
+            <a href="/pages/post.html?id=${post1.id}" class="post-title">${post1.name}</a>
             <span class="post-date">${post1.date}</span>
             <p class="post-description">${post1.description}</p>
             <div class="profile">
@@ -86,7 +86,7 @@ const post = document.querySelector('.post');
                 post.innerHTML += `<div class="post-box tech">
                 <img src="${post1.image}" alt="" class="post-img">
                 <h2 class="category">${post1.type}</h2>
-                <a href="post.html?id=${post1.id}" class="post-title">${post1.name}</a>
+                <a href="/pages/post.html?id=${post1.id}" class="post-title">${post1.name}</a>
                 <span class="post-date">${post1.date}</span>
                 <p class="post-description">${post1.description}</p>
                 <div class="profile">
@@ -101,7 +101,7 @@ const post = document.querySelector('.post');
                 post.innerHTML += `<div class="post-box tech">
                 <img src="${post1.image}" alt="" class="post-img">
                 <h2 class="category">${post1.type}</h2>
-                <a href="post.html?id=${post1.id}" class="post-title">${post1.name}</a>
+                <a href="/pages/post.html?id=${post1.id}" class="post-title">${post1.name}</a>
                 <span class="post-date">${post1.date}</span>
                 <p class="post-description">${post1.description}</p>
                 <div class="profile">

@@ -428,7 +428,7 @@ new Timeline($('#cvs3').get(0)).toggle(true);
 
 //chatbot open function here 👇
 function openWindow() {
-    window.open("./pages/chatbot.html");
+    window.open("chatbot.html");
   }
 // complete chatbot open function 👆//
 
